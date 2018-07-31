@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+	"os"
 	"strings"
 
 	"github.com/sqweek/dialog"
@@ -29,5 +31,6 @@ func parseArgs(args []string) (reminder string) {
 }
 
 func main() {
-
+	parsed := parseArgs(os.Args)
+	fmt.Println(parsed)
 }
