@@ -1,0 +1,11 @@
+language: go
+
+go:
+  - 1.10.x
+
+before_install:
+  - go get -v github.com/golang/lint/golint
+
+script:
+  - make lint
+  - make test
