@@ -2,10 +2,8 @@ package parser
 
 import "strings"
 
-// ParseArgs receive an slice of strings and return an reminder phrase
-func ParseArgs(args []string) (reminder string) {
-	var someone, what, when string
-
+// ParseArgs receive an slice of strings and return someone, what and when
+func ParseArgs(args []string) (someone, what, when string) {
 	for _, argument := range args[1:] {
 		if argument == "me" {
 			someone = argument
@@ -15,8 +13,7 @@ func ParseArgs(args []string) (reminder string) {
 			what += argument + " "
 		}
 	}
-	reminder = strings.Trim(someone, " ") +
-		"|" + strings.Trim(what, " ") +
-		"|" + strings.Trim(when, " ")
-	return
+	return strings.Trim(someone, " "),
+		strings.Trim(what, " "),
+		strings.Trim(when, " ")
 }

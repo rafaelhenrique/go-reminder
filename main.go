@@ -14,6 +14,8 @@ import (
 // }
 
 func main() {
-	parsed := parser.ParseArgs(os.Args)
-	fmt.Println(parsed)
+	someone, what, when := parser.ParseArgs(os.Args)
+	fmt.Printf("Someone: %+v\n", someone)
+	fmt.Printf("What: %+v\n", what)
+	fmt.Printf("When: %+v\n", when)
 }
