@@ -14,7 +14,10 @@ import (
 // }
 
 func main() {
-	someone, what, when, _ := parser.ParseArgs(os.Args)
+	someone, what, when, err := parser.ParseArgs(os.Args)
+	if err != nil {
+		fmt.Println(err)
+	}
 	fmt.Printf("Someone: %+v\n", someone)
 	fmt.Printf("What: %+v\n", what)
 	fmt.Printf("When: %+v\n", when)
