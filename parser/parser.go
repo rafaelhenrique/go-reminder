@@ -2,8 +2,8 @@ package parser
 
 import "strings"
 
-// parseArgs receive an slice of strings and return an reminder phrase
-func parseArgs(args []string) (reminder string) {
+// ParseArgs receive an slice of strings and return an reminder phrase
+func ParseArgs(args []string) (reminder string) {
 	var someone, what, when string
 
 	for _, argument := range args[1:] {

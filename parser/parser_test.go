@@ -24,7 +24,7 @@ var testCases = []struct {
 
 func TestParseArgs(t *testing.T) {
 	for _, tt := range testCases {
-		actual := parseArgs(tt.input)
+		actual := ParseArgs(tt.input)
 		if actual != tt.expected {
 			msg := `
             input=%v
