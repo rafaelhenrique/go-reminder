@@ -2,50 +2,43 @@
 
 
 [[projects]]
-  branch = "master"
-  digest = "1:4b20dfa0cae9d8c6eb322ddfb30ed2e32a2ec8a8c8987255b1e916f9dc0e8518"
-  name = "github.com/AllenDang/w32"
+  digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
+  name = "github.com/davecgh/go-spew"
+  packages = ["spew"]
+  pruneopts = "UT"
+  revision = "8991bc29aa16c548c550c7ff78260e27b9ab7c73"
+  version = "v1.1.1"
+
+[[projects]]
+  digest = "1:40e195917a951a8bf867cd05de2a46aaf1806c50cf92eebf4c16f78cd196f747"
+  name = "github.com/pkg/errors"
   packages = ["."]
   pruneopts = "UT"
-  revision = "ad0a36d80adcd081d5c0dded8e97a009b486d1db"
+  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
+  version = "v0.8.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:2e260e601f1a1f48424b95e60a6f2fd4da9137e63c49f3b5e7190ec5f4f16ca9"
-  name = "github.com/mattn/go-gtk"
-  packages = [
-    "gdk",
-    "gdkpixbuf",
-    "gio",
-    "glib",
-    "gtk",
-    "pango",
-  ]
+  digest = "1:0028cb19b2e4c3112225cd871870f2d9cf49b9b4276531f03438a88e94be86fe"
+  name = "github.com/pmezard/go-difflib"
+  packages = ["difflib"]
   pruneopts = "UT"
-  revision = "7d65db4a7c69ab6574ecec8cce42763701530544"
+  revision = "792786c7400a136282c1664665ae0a8db921c6c2"
+  version = "v1.0.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:90450a3b8474ce42389a72f9283a074444e9f754382af12ade3b7a55bcf0f699"
-  name = "github.com/mattn/go-pointer"
-  packages = ["."]
+  digest = "1:18752d0b95816a1b777505a97f71c7467a8445b8ffb55631a7bf779f6ba4fa83"
+  name = "github.com/stretchr/testify"
+  packages = ["assert"]
   pruneopts = "UT"
-  revision = "1d30dc4b6f28271a3bd126071d4d0363e618415b"
-
-[[projects]]
-  branch = "master"
-  digest = "1:5dc8b7c32817def0b41966db84c8f9061d2dbd0b2368ad9cb995a4ea81d3ff71"
-  name = "github.com/sqweek/dialog"
-  packages = [
-    ".",
-    "cocoa",
-  ]
-  pruneopts = "UT"
-  revision = "2f9d9e5dd848a3bad4bdd0210c73bb90c13a3791"
+  revision = "f35b8ab0b5a2cef36673838d662e249dd9c94686"
+  version = "v1.2.2"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = []
+  input-imports = [
+    "github.com/pkg/errors",
+    "github.com/stretchr/testify/assert",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
