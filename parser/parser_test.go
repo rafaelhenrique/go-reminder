@@ -32,6 +32,13 @@ var testCases = []struct {
 		[]string{"remind", "whatever"},
 		"", "", "", ErrSyntax,
 	},
+	{
+		[]string{"remind", "whatever",
+			"to", "update", "the", "project", "status",
+			"every", "Monday", "at", "9am",
+		},
+		"", "", "", ErrSyntax,
+	},
 }
 
 func TestParseArgs(t *testing.T) {
