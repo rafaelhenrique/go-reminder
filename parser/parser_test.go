@@ -1,4 +1,4 @@
-package main
+package parser
 
 import "testing"
 
@@ -7,13 +7,17 @@ var testCases = []struct {
 	expected string
 }{
 	{
-		[]string{"remind", "me", "to", "drink", "water",
-			"at", "3pm", "every", "day"},
+		[]string{"remind", "me",
+			"to", "drink", "water",
+			"at", "3pm", "every", "day",
+		},
 		"me|to drink water|at 3pm every day",
 	},
 	{
-		[]string{"remind", "me", "to", "update", "the", "project", "status",
-			"every", "Monday", "at", "9am"},
+		[]string{"remind", "me",
+			"to", "update", "the", "project", "status",
+			"every", "Monday", "at", "9am",
+		},
 		"me|to update the project status|every Monday at 9am",
 	},
 }
